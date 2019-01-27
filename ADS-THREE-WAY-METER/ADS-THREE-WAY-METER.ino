@@ -35,6 +35,32 @@ uint32_t pH_In_probe2[]  = {19000,   3000,  1000};
 int soil_Out[]     = {    1,     2,     3,     4,     5,     6};
 int pH_Out_probe[] = {    4,     7,    10};
 
+//// Kadyai 003 GAIN_SIXTEEN
+//uint32_t soil_In_probe1[]  = {0,  600,   1000,   1300,   3500,   7000};
+//uint32_t soil_In_probe2[]  = {0,  1000,   1200,   1500,   3000,   6000};
+//uint32_t pH_In_probe1[]  = {6000,   3000,  1000};
+//uint32_t pH_In_probe2[]  = {2000,   1500,  800};
+//// Meter out
+//int soil_Out[]     = {    1,     2,     3,     4,     5,     6};
+//int pH_Out_probe[] = {    4,     5,    8};
+
+//// Kadyai 004 GAIN_SIXTEEN
+//uint32_t soil_In_probe1[]  = {0,  2000,   3000,   3500,   4600,   6000};
+//uint32_t soil_In_probe2[]  = {0,  600,   3200,   5500,   8300,   10000};
+//uint32_t pH_In_probe1[]  = {3000,   1200,  400};
+//uint32_t pH_In_probe2[]  = {6000,   3700,  2400};
+//// Meter out
+//int soil_Out[]     = {    1,     2,     3,     4,     5,     6};
+//int pH_Out_probe[] = {    4,     5,    7};
+
+//// Kadyai 005 GAIN_SIXTEEN
+//uint32_t soil_In_probe1[]  = {0,  1200,   2000,   3000,   5000,   6000};
+//uint32_t soil_In_probe2[]  = {0,  400,   4100,   7600,   9000,   10000};
+//uint32_t pH_In_probe1[]  = {20000,   2200,  1000};
+//uint32_t pH_In_probe2[]  = {14000,   7000,  4000};
+//// Meter out
+//int soil_Out[]     = {    1,     2,     3,     4,     5,     6};
+//int pH_Out_probe[] = {    4,     5,    7};
 
 uint32_t read_soil1, read_soil2, read_pH1, read_pH2;
 uint16_t pH_probe1, soil_probe1, pH_probe2, soil_probe2;
