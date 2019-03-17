@@ -18,7 +18,7 @@
 #include <Adafruit_ADS1015.h>
 Adafruit_ADS1115 *ads;
 
-//// Kadyai 001 GAIN_EIGHT
+// Kadyai 001 GAIN_EIGHT
 uint32_t soil_In_probe1[]  = {0,  3500,   6500,   8500,   12500,   17800};
 uint32_t soil_In_probe2[]  = {0,  1500,   3000,   6000,   8000,   12000};
 uint32_t pH_In_probe1[]  = {10000,   1300,  650};
@@ -29,7 +29,6 @@ uint32_t pH_In_probe2[]  = {19000,   3000,  1000};
 //uint32_t soil_In_probe2[]  = {0,  900,   1300,   1700,   3000,   3000};
 //uint32_t pH_In_probe1[]  = {20000,   1850,  800};
 //uint32_t pH_In_probe2[]  = {20000,   1500,  1000};
-
 
 // Meter out
 int soil_Out[]     = {    1,     2,     3,     4,     5,     6};
