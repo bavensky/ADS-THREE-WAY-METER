@@ -1,6 +1,6 @@
 #include <MqttConnector.h>
 
-extern uint16_t adc0, adc1, adc2, adc3;
+extern int16_t adc0, adc1, adc2, adc3;
 
 extern int relayPinState;
 extern MqttConnector* mqtt;
@@ -32,20 +32,12 @@ void register_publish_hooks() {
     data["millis"] = millis();
     data["relayState"] = relayPinState;
     data["updateInterval"] = PUBLISH_EVERY;
-    if(adc0 > 0) {
-      data["adc0"] = adc0;  // ph1
-    }
-    if(adc1 > 0) {
-      data["adc1"] = adc1;  // moisture 1
-    }
-    if(adc2 > 0) {
-      data["adc2"] = adc2;  // ph2
-    }
-    if(adc3 > 0) {
-      data["adc3"] = adc3;  // moisture 2
-    }
+    data["adc0"] = adc0;  // ph1
+    data["adc1"] = adc1;  // moisture 1
+    data["adc2"] = adc2;  // ph2
+    data["adc3"] = adc3;  // moisture 2
     data["battery"] =  analogRead(A0) * (5.0 / 1023.0);
-    
+
     digitalWrite(LED_PIN, !digitalRead(LED_PIN));
     delay(200);
     digitalWrite(LED_PIN, !digitalRead(LED_PIN));
@@ -70,4 +62,12 @@ static void readSensor() {
   adc1 = ads.readADC_SingleEnded(1);
   adc2 = ads.readADC_SingleEnded(2);
   adc3 = ads.readADC_SingleEnded(3);
+
+  Serial.print(adc0);
+  Serial.print(",");
+  Serial.print(adc1);
+  Serial.print(",");
+  Serial.print(adc2);
+  Serial.print(",");
+  Serial.println(adc3);
 }
